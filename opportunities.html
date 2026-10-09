@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Opportunities | SkillBridge</title>
+  <meta name="description" content="Search and filter verified youth opportunities in South Africa by category, location, experience level, and upcoming deadline.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Accessible Skip Navigation Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="SkillBridge Home">
+        <img src="images/logo.svg" alt="SkillBridge Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop" aria-label="Primary Desktop Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="opportunities.html" class="nav-link active" aria-current="page">Opportunities</a>
+        <a href="resources.html" class="nav-link">Career Resources</a>
+        <a href="contact.html" class="nav-link">Contact &amp; Report</a>
+      </nav>
+
+      <!-- Navigation Actions -->
+      <div class="nav-actions">
+        <a href="opportunities.html" class="btn btn-primary btn-sm" id="nav-desktop-cta">
+          Explore Opportunities
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-navigation-drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-navigation-drawer" class="mobile-drawer" aria-label="Mobile Navigation">
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="opportunities.html" class="mobile-nav-link active" aria-current="page">Opportunities</a>
+        <a href="resources.html" class="mobile-nav-link">Career Resources</a>
+        <a href="contact.html" class="mobile-nav-link">Contact &amp; Report</a>
+      </nav>
+      <div class="mobile-drawer-cta">
+        <a href="opportunities.html" class="btn btn-secondary btn-block">Explore Opportunities</a>
+        <a href="resources.html" class="btn btn-outline btn-block">Career Resources</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="section">
+    <div class="container">
+      <!-- Page Header -->
+      <div class="section-header text-left" style="margin-bottom: 2rem;">
+        <span class="section-badge">Opportunities Directory</span>
+        <h1 class="section-title">Explore Opportunities</h1>
+        <p class="section-subtitle">
+          Find opportunities based on your interests, location, experience and deadline.
+        </p>
+      </div>
+
+      <!-- Expiry Policy Notice Banner -->
+      <div class="alert alert-warning" style="margin-bottom: 2rem; font-size: var(--text-xs);" role="note">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        <div>
+          <strong>Quality &amp; Freshness Policy:</strong> SkillBridge regularly reviews opportunity information. Expired opportunities are removed from active listings to help keep information useful and current.
+        </div>
+      </div>
+
+      <!-- Search & Multi-Filter Control Panel -->
+      <section class="filter-panel" aria-label="Opportunity filters and search">
+        <div class="filter-grid">
+          <!-- Keyword Search -->
+          <div class="form-group">
+            <label for="filter-search" class="form-label">Search Keyword</label>
+            <div class="search-input-wrapper">
+              <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="filter-search" class="form-control" placeholder="Title, organisation, keyword..." style="padding-left: 2.4rem;">
+            </div>
+          </div>
+
+          <!-- Category Filter -->
+          <div class="form-group">
+            <label for="filter-category" class="form-label">Category</label>
+            <select id="filter-category" class="form-control">
+              <option value="All">All Categories</option>
+              <option value="Job">Jobs</option>
+              <option value="Internship">Internships</option>
+              <option value="Learnership">Learnerships</option>
+              <option value="Bursary">Bursaries</option>
+              <option value="Skills Programme">Skills Programmes</option>
+              <option value="Work Integrated Learning">Work Integrated Learning</option>
+              <option value="Graduate Programme">Graduate Programmes</option>
+            </select>
+          </div>
+
+          <!-- Location Filter -->
+          <div class="form-group">
+            <label for="filter-location" class="form-label">Location</label>
+            <select id="filter-location" class="form-control">
+              <option value="All">All Locations</option>
+              <option value="South Africa">National / South Africa</option>
+              <option value="Pretoria">Pretoria</option>
+              <option value="Cape Town">Cape Town</option>
+              <option value="Gauteng">Gauteng (JHB, Meyerton, Benoni)</option>
+              <option value="Free State">Free State (Sasolburg)</option>
+              <option value="Western Cape">Western Cape (Garden Route)</option>
+              <option value="Northern Cape">Northern Cape</option>
+              <option value="Eastern Cape">Eastern Cape (Kariega / Uitenhage)</option>
+            </select>
+          </div>
+
+          <!-- Experience Level Filter -->
+          <div class="form-group">
+            <label for="filter-experience" class="form-label">Experience Level</label>
+            <select id="filter-experience" class="form-control">
+              <option value="All">All Levels</option>
+              <option value="Student / Graduate">Student / Graduate</option>
+              <option value="Entry Level">Entry Level / Youth</option>
+              <option value="Experienced">Experienced / Professional</option>
+              <option value="Varies">Varies / Any</option>
+            </select>
+          </div>
+
+          <!-- Closing Date Filter -->
+          <div class="form-group">
+            <label for="filter-closing" class="form-label">Closing Date</label>
+            <select id="filter-closing" class="form-control">
+              <option value="All">All Deadlines</option>
+              <option value="Closing Soon">Closing Soon (Next 7 Days)</option>
+              <option value="This Month">This Month (October 2026)</option>
+              <option value="Future">Future Deadlines</option>
+              <option value="Ongoing">Ongoing / Open Intake</option>
+              <option value="Expired">Expired (Archive)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Filter Sub-Controls: Saved, Expired & Clear -->
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border-light);">
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+            <label style="display: flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--text-muted); cursor: pointer;">
+              <input type="checkbox" id="toggle-bookmarked-only" style="accent-color: var(--secondary); width: 16px; height: 16px;">
+              <span>Show Bookmarked Opportunities Only</span>
+            </label>
+
+            <label style="display: flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--text-muted); cursor: pointer;">
+              <input type="checkbox" id="toggle-expired" style="accent-color: var(--secondary); width: 16px; height: 16px;">
+              <span>Include expired demo records for testing/review</span>
+            </label>
+          </div>
+
+          <button id="clear-filters-btn" class="btn btn-outline btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            Clear Filters
+          </button>
+        </div>
+      </section>
+
+      <!-- Results Count & Summary Bar -->
+      <div class="results-summary-bar">
+        <div id="results-count" class="results-count" aria-live="polite">
+          Loading opportunities...
+        </div>
+      </div>
+
+      <!-- Opportunities Cards Grid (Rendered dynamically by JavaScript) -->
+      <div id="opportunities-list-container" class="opportunities-grid" aria-live="polite">
+        <!-- Javascript injects <article class="opportunity-card"> elements here -->
+      </div>
+
+      <!-- Empty State (Shown when zero matches occur) -->
+      <div id="empty-state" class="empty-state" style="display: none;" role="region" aria-label="No opportunities found">
+        <div class="empty-state-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <line x1="8" y1="11" x2="14" y2="11"></line>
+          </svg>
+        </div>
+        <h2 class="empty-state-title">No opportunities found</h2>
+        <p class="empty-state-text">
+          Try changing your search terms or removing some filters to discover more matching positions.
+        </p>
+        <button id="empty-clear-btn" class="btn btn-primary">
+          Clear Filters
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>Skill<span>Bridge</span></h2>
+          <p class="footer-tagline">
+            <strong>Find opportunities. Build skills. Bridge your future.</strong><br>
+            Connecting youth to verified opportunities that move them forward.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Navigation</h3>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="opportunities.html" class="footer-link">Opportunities</a>
+            <a href="resources.html" class="footer-link">Career Resources</a>
+            <a href="contact.html" class="footer-link">Contact &amp; Report</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Categories</h3>
+          <div class="footer-links">
+            <a href="opportunities.html?category=Job" class="footer-link">Jobs</a>
+            <a href="opportunities.html?category=Internship" class="footer-link">Internships</a>
+            <a href="opportunities.html?category=Learnership" class="footer-link">Learnerships</a>
+            <a href="opportunities.html?category=Bursary" class="footer-link">Bursaries</a>
+            <a href="opportunities.html?category=Course" class="footer-link">Courses</a>
+            <a href="opportunities.html?category=Skills%20Programme" class="footer-link">Skills Programmes</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Safety</h3>
+          <div class="footer-safety-box">
+            <strong>⚠️ Important Safety Notice</strong>
+            Always verify opportunities through official sources before submitting personal information.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer-bar">
+        <div>
+          <strong class="footer-disclaimer-highlight">Demo Platform Disclaimer:</strong>
+          This website is an educational demonstration project. Opportunities displayed on SkillBridge may be fictional examples or publicly available demonstration information. Always verify opportunities through the relevant organisation's official website.
+        </div>
+        <div class="footer-copyright">
+          &copy; 2026 SkillBridge. Educational demonstration project.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>

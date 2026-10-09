@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Report | SkillBridge</title>
+  <meta name="description" content="Help keep SkillBridge accurate and safe. Send general enquiries, report suspicious listings, or suggest verified opportunities.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Accessible Skip Navigation Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="SkillBridge Home">
+        <img src="images/logo.svg" alt="SkillBridge Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop" aria-label="Primary Desktop Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="opportunities.html" class="nav-link">Opportunities</a>
+        <a href="resources.html" class="nav-link">Career Resources</a>
+        <a href="contact.html" class="nav-link active" aria-current="page">Contact &amp; Report</a>
+      </nav>
+
+      <!-- Navigation Actions -->
+      <div class="nav-actions">
+        <a href="opportunities.html" class="btn btn-primary btn-sm" id="nav-desktop-cta">
+          Explore Opportunities
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-navigation-drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-navigation-drawer" class="mobile-drawer" aria-label="Mobile Navigation">
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="opportunities.html" class="mobile-nav-link">Opportunities</a>
+        <a href="resources.html" class="mobile-nav-link">Career Resources</a>
+        <a href="contact.html" class="mobile-nav-link active" aria-current="page">Contact &amp; Report</a>
+      </nav>
+      <div class="mobile-drawer-cta">
+        <a href="opportunities.html" class="btn btn-secondary btn-block">Explore Opportunities</a>
+        <a href="resources.html" class="btn btn-outline btn-block">Career Resources</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="section">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="section-badge">Community Support &amp; Integrity</span>
+        <h1 class="section-title">Help Us Keep SkillBridge Useful</h1>
+        <p class="section-subtitle">
+          Whether you have a general query, need to report an expired or deceptive opportunity, or want to suggest a youth programme, we are here to help.
+        </p>
+      </div>
+
+      <!-- Main Form Wrapper -->
+      <div class="form-wrapper">
+        <!-- Accessible Form Tabs -->
+        <div class="form-tab-bar" role="tablist" aria-label="Contact options">
+          <button class="form-tab-btn active" data-tab="general" role="tab" aria-selected="true" id="tab-general" aria-controls="form-general">
+            General Enquiry
+          </button>
+          <button class="form-tab-btn" data-tab="report" role="tab" aria-selected="false" id="tab-report" aria-controls="form-report">
+            Report an Opportunity
+          </button>
+          <button class="form-tab-btn" data-tab="suggest" role="tab" aria-selected="false" id="tab-suggest" aria-controls="form-suggest">
+            Suggest an Opportunity
+          </button>
+          <button class="form-tab-btn" data-tab="feedback" role="tab" aria-selected="false" id="tab-feedback" aria-controls="form-feedback">
+            Platform Feedback
+          </button>
+        </div>
+
+        <!-- 1. General Enquiry Form -->
+        <section id="form-general" class="form-panel active" role="tabpanel" aria-labelledby="tab-general">
+          <p style="font-size: var(--text-sm); color: var(--text-muted); margin-bottom: 1.5rem;">
+            Have questions regarding the SkillBridge demonstration platform, partner programmes, or student project information? Fill in the form below.
+          </p>
+
+          <form id="general-enquiry-form" novalidate>
+            <div class="form-feedback" aria-live="polite"></div>
+
+            <div class="form-grid-2" style="margin-bottom: 1.25rem;">
+              <div class="form-group">
+                <label for="general-name" class="form-label">Full Name <span style="color:var(--danger)">*</span></label>
+                <input type="text" id="general-name" class="form-control" placeholder="e.g. Zola Ndlovu" required>
+                <div class="form-field-error">Please provide your full name.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="general-email" class="form-label">Email Address <span style="color:var(--danger)">*</span></label>
+                <input type="email" id="general-email" class="form-control" placeholder="name@example.com" required>
+                <div class="form-field-error">Please provide a valid email address.</div>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.25rem;">
+              <label for="general-subject" class="form-label">Subject <span style="color:var(--danger)">*</span></label>
+              <input type="text" id="general-subject" class="form-control" placeholder="What is this enquiry regarding?" required>
+              <div class="form-field-error">Please enter a subject.</div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.75rem;">
+              <label for="general-message" class="form-label">Message <span style="color:var(--danger)">*</span></label>
+              <textarea id="general-message" class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+              <div class="form-field-error">Please enter your message.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg">
+              Send General Enquiry
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </section>
+
+        <!-- 2. Report an Opportunity Form -->
+        <section id="form-report" class="form-panel" role="tabpanel" aria-labelledby="tab-report">
+          <div class="alert alert-warning" style="margin-bottom: 1.5rem; font-size: var(--text-xs);" role="note">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+            <div>
+              <strong>Protecting Youth Safety:</strong> We take fraudulent, expired, and inaccurate opportunity reports seriously. Verified alerts are reviewed within 24 hours.
+            </div>
+          </div>
+
+          <form id="report-opportunity-form" novalidate>
+            <div class="form-feedback" aria-live="polite"></div>
+
+            <div class="form-grid-2" style="margin-bottom: 1.25rem;">
+              <div class="form-group">
+                <label for="report-name" class="form-label">Your Name <span style="color:var(--danger)">*</span></label>
+                <input type="text" id="report-name" class="form-control" placeholder="e.g. Sipho Dlamini" required>
+                <div class="form-field-error">Please enter your name.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="report-email" class="form-label">Your Email <span style="color:var(--danger)">*</span></label>
+                <input type="email" id="report-email" class="form-control" placeholder="name@example.com" required>
+                <div class="form-field-error">Please enter a valid email.</div>
+              </div>
+            </div>
+
+            <div class="form-grid-2" style="margin-bottom: 1.25rem;">
+              <div class="form-group">
+                <label for="report-opportunity" class="form-label">Opportunity Title <span style="color:var(--danger)">*</span></label>
+                <input type="text" id="report-opportunity" class="form-control" placeholder="Title of listing on SkillBridge" required>
+                <div class="form-field-error">Please specify the opportunity title.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="report-reason" class="form-label">Reason for Report <span style="color:var(--danger)">*</span></label>
+                <select id="report-reason" class="form-control" required>
+                  <option value="">Select a reason...</option>
+                  <option value="expired">Expired opportunity</option>
+                  <option value="incorrect_info">Incorrect information</option>
+                  <option value="suspicious">Suspicious / scam opportunity</option>
+                  <option value="bad_link">Incorrect application link</option>
+                  <option value="other">Other reason</option>
+                </select>
+                <div class="form-field-error">Please select a reason.</div>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.75rem;">
+              <label for="report-message" class="form-label">Detailed Explanation <span style="color:var(--danger)">*</span></label>
+              <textarea id="report-message" class="form-control" rows="5" placeholder="Explain what is incorrect or suspicious about this listing..." required></textarea>
+              <div class="form-field-error">Please provide details regarding your report.</div>
+            </div>
+
+            <button type="submit" class="btn btn-secondary btn-lg">
+              Submit Report
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </form>
+        </section>
+
+        <!-- 3. Suggest an Opportunity Form -->
+        <section id="form-suggest" class="form-panel" role="tabpanel" aria-labelledby="tab-suggest">
+          <p style="font-size: var(--text-sm); color: var(--text-muted); margin-bottom: 1.5rem;">
+            Know of a legitimate bursary, learnership, or youth job opportunity? Help us expand access by suggesting it below.
+          </p>
+
+          <form id="suggest-opportunity-form" novalidate>
+            <div class="form-feedback" aria-live="polite"></div>
+
+            <div class="form-grid-2" style="margin-bottom: 1.25rem;">
+              <div class="form-group">
+                <label for="suggest-title" class="form-label">Opportunity Name <span style="color:var(--danger)">*</span></label>
+                <input type="text" id="suggest-title" class="form-control" placeholder="e.g. Cloud Computing Learnership" required>
+                <div class="form-field-error">Please provide the opportunity name.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="suggest-org" class="form-label">Organisation / Employer <span style="color:var(--danger)">*</span></label>
+                <input type="text" id="suggest-org" class="form-control" placeholder="e.g. Standard Bank Foundation" required>
+                <div class="form-field-error">Please provide the organisation name.</div>
+              </div>
+            </div>
+
+            <div class="form-grid-2" style="margin-bottom: 1.25rem;">
+              <div class="form-group">
+                <label for="suggest-category" class="form-label">Category <span style="color:var(--danger)">*</span></label>
+                <select id="suggest-category" class="form-control" required>
+                  <option value="">Select category...</option>
+                  <option value="Job">Job</option>
+                  <option value="Internship">Internship</option>
+                  <option value="Learnership">Learnership</option>
+                  <option value="Bursary">Bursary</option>
+                  <option value="Course">Course</option>
+                  <option value="Skills Programme">Skills Programme</option>
+                </select>
+                <div class="form-field-error">Please select a category.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="suggest-location" class="form-label">Location <span style="color:var(--danger)">*</span></label>
+                <input type="text" id="suggest-location" class="form-control" placeholder="e.g. Cape Town / Remote" required>
+                <div class="form-field-error">Please specify the location.</div>
+              </div>
+            </div>
+
+            <div class="form-grid-2" style="margin-bottom: 1.25rem;">
+              <div class="form-group">
+                <label for="suggest-date" class="form-label">Closing Date <span style="color:var(--danger)">*</span></label>
+                <input type="date" id="suggest-date" class="form-control" required>
+                <div class="form-field-error">Please provide the closing deadline.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="suggest-link" class="form-label">Official Application / Verification Link <span style="color:var(--danger)">*</span></label>
+                <input type="url" id="suggest-link" class="form-control" placeholder="https://example.co.za/careers" required>
+                <div class="form-field-error">Please enter the official URL.</div>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.75rem;">
+              <label for="suggest-info" class="form-label">Additional Information / Requirements</label>
+              <textarea id="suggest-info" class="form-control" rows="4" placeholder="Briefly describe stipend, requirements, or qualifications..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg">
+              Submit Suggested Opportunity
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </form>
+        </section>
+
+        <!-- 4. Platform Feedback Form -->
+        <section id="form-feedback" class="form-panel" role="tabpanel" aria-labelledby="tab-feedback">
+          <p style="font-size: var(--text-sm); color: var(--text-muted); margin-bottom: 1.5rem;">
+            Tell us what is working well, what could be improved, and what features would make the platform more useful for South African youth.
+          </p>
+
+          <form id="platform-feedback-form" novalidate>
+            <div class="form-feedback" aria-live="polite"></div>
+
+            <div class="form-grid-2" style="margin-bottom: 1.25rem;">
+              <div class="form-group">
+                <label for="feedback-name" class="form-label">Your Name <span style="color:var(--danger)">*</span></label>
+                <input type="text" id="feedback-name" class="form-control" placeholder="e.g. Lethabo Mokoena" required>
+                <div class="form-field-error">Please enter your name.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="feedback-email" class="form-label">Email Address <span style="color:var(--danger)">*</span></label>
+                <input type="email" id="feedback-email" class="form-control" placeholder="name@example.com" required>
+                <div class="form-field-error">Please provide a valid email.</div>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.25rem;">
+              <label for="feedback-type" class="form-label">Feedback Type <span style="color:var(--danger)">*</span></label>
+              <select id="feedback-type" class="form-control" required>
+                <option value="">Select an option...</option>
+                <option value="usability">Website usability</option>
+                <option value="content">Content quality</option>
+                <option value="feature">Feature request</option>
+                <option value="bug">Bug or technical issue</option>
+                <option value="general">General feedback</option>
+              </select>
+              <div class="form-field-error">Please select a feedback type.</div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.75rem;">
+              <label for="feedback-message" class="form-label">Your Feedback <span style="color:var(--danger)">*</span></label>
+              <textarea id="feedback-message" class="form-control" rows="5" placeholder="Share your suggestion, concern, or observation about the platform..." required></textarea>
+              <div class="form-field-error">Please tell us about your feedback.</div>
+            </div>
+
+            <button type="submit" class="btn btn-secondary btn-lg">
+              Send Feedback
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>Skill<span>Bridge</span></h2>
+          <p class="footer-tagline">
+            <strong>Find opportunities. Build skills. Bridge your future.</strong><br>
+            Connecting youth to verified opportunities that move them forward.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Navigation</h3>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="opportunities.html" class="footer-link">Opportunities</a>
+            <a href="resources.html" class="footer-link">Career Resources</a>
+            <a href="contact.html" class="footer-link">Contact &amp; Report</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Categories</h3>
+          <div class="footer-links">
+            <a href="opportunities.html?category=Job" class="footer-link">Jobs</a>
+            <a href="opportunities.html?category=Internship" class="footer-link">Internships</a>
+            <a href="opportunities.html?category=Learnership" class="footer-link">Learnerships</a>
+            <a href="opportunities.html?category=Bursary" class="footer-link">Bursaries</a>
+            <a href="opportunities.html?category=Course" class="footer-link">Courses</a>
+            <a href="opportunities.html?category=Skills%20Programme" class="footer-link">Skills Programmes</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Safety</h3>
+          <div class="footer-safety-box">
+            <strong>⚠️ Important Safety Notice</strong>
+            Always verify opportunities through official sources before submitting personal information.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer-bar">
+        <div>
+          <strong class="footer-disclaimer-highlight">Demo Platform Disclaimer:</strong>
+          This website is an educational demonstration project. Opportunities displayed on SkillBridge may be fictional examples or publicly available demonstration information. Always verify opportunities through the relevant organisation's official website.
+        </div>
+        <div class="footer-copyright">
+          &copy; 2026 SkillBridge. Educational demonstration project.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>

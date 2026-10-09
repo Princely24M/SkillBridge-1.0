@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge | Connecting Youth to Opportunities That Move Them Forward</title>
+  <meta name="description" content="Discover jobs, internships, learnerships, bursaries, and skills programmes in one accessible place. Built for South African youth.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Accessible Skip Navigation Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="SkillBridge Home">
+        <img src="images/logo.svg" alt="SkillBridge Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop" aria-label="Primary Desktop Navigation">
+        <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+        <a href="opportunities.html" class="nav-link">Opportunities</a>
+        <a href="resources.html" class="nav-link">Career Resources</a>
+        <a href="contact.html" class="nav-link">Contact &amp; Report</a>
+      </nav>
+
+      <!-- Navigation Actions -->
+      <div class="nav-actions">
+        <a href="opportunities.html" class="btn btn-primary btn-sm" style="display: none;">
+          Explore Opportunities
+        </a>
+        <a href="opportunities.html" class="btn btn-primary btn-sm" id="nav-desktop-cta">
+          Explore Opportunities
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button class="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-navigation-drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-navigation-drawer" class="mobile-drawer" aria-label="Mobile Navigation">
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link active" aria-current="page">Home</a>
+        <a href="opportunities.html" class="mobile-nav-link">Opportunities</a>
+        <a href="resources.html" class="mobile-nav-link">Career Resources</a>
+        <a href="contact.html" class="mobile-nav-link">Contact &amp; Report</a>
+      </nav>
+      <div class="mobile-drawer-cta">
+        <a href="opportunities.html" class="btn btn-secondary btn-block">Explore Opportunities</a>
+        <a href="resources.html" class="btn btn-outline btn-block">Career Resources</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main id="main-content" class="homepage-shell">
+    <section class="hero-showcase container" aria-labelledby="hero-heading">
+      <div class="hero-showcase-inner">
+        <div class="hero-copy">
+          <span class="section-badge hero-badge-custom">Youth Opportunity &amp; Skills Platform</span>
+          <h1 id="hero-heading" class="hero-title">Find Your Next <span class="highlight">Opportunity</span>.</h1>
+          <p class="hero-tagline">Discover jobs, internships, learnerships, bursaries and skills programmes in one accessible place.</p>
+
+          <div class="hero-actions">
+            <a href="opportunities.html" class="btn btn-primary hero-primary-btn">Explore Opportunities <span aria-hidden="true">→</span></a>
+            <a href="resources.html" class="btn btn-outline hero-secondary-btn">Explore Career Resources</a>
+          </div>
+
+          <div class="hero-search-box">
+            <form class="hero-search-form" action="opportunities.html" method="GET">
+              <label class="search-input-wrapper" aria-label="Search opportunities">
+                <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input class="hero-search-input" type="search" name="query" placeholder="Search jobs, internships, learnership" aria-label="Search opportunities" />
+              </label>
+
+              <label aria-label="Filter by category">
+                <select class="hero-search-select" name="category">
+                  <option>All Categories</option>
+                  <option>Job</option>
+                  <option>Internship</option>
+                  <option>Learnership</option>
+                  <option>Bursary</option>
+                  <option>Skills Programme</option>
+                  <option>Volunteer</option>
+                </select>
+              </label>
+
+              <button type="submit" class="btn btn-secondary hero-search-submit">Search</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="hero-visual-panel">
+          <img src="images/hero-pathway.svg" alt="SkillBridge pathway illustration" class="hero-visual-svg">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-surface" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section-header feature-header">
+          <span class="section-badge">Hand-picked this week</span>
+          <h2 id="featured-heading" class="section-title">Featured opportunities</h2>
+          <p class="section-subtitle">Fresh, vetted openings from established South African organisations.</p>
+        </div>
+
+        <div id="featured-opportunities-container" class="featured-grid" aria-live="polite">
+          <div class="featured-card placeholder-card">Loading opportunities...</div>
+        </div>
+
+        <div class="centered-action">
+          <a href="opportunities.html" class="btn btn-primary btn-md">
+            Explore Opportunities →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section deadline-section" aria-labelledby="deadlines-heading">
+      <div class="container deadlines-layout">
+        <div class="deadline-copy">
+          <span class="section-badge">Plan ahead</span>
+          <h2 id="deadlines-heading">Upcoming deadlines</h2>
+          <p>Don’t miss your window. Save an opportunity and get a reminder before applications close.</p>
+          <a href="opportunities.html" class="deadline-link">View deadline →</a>
+        </div>
+
+        <div id="upcoming-deadlines-container" class="deadline-list" aria-live="polite">
+          <div class="deadline-item placeholder-row">Loading closing deadlines...</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-surface" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header feature-header">
+          <span class="section-badge">Practical career support</span>
+          <h2 id="skills-heading" class="section-title">Build the skills behind the application</h2>
+          <p class="section-subtitle">Clear, useful advice for every stage of the application process.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <div class="skill-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+              </svg>
+            </div>
+            <div class="skill-label">CV clinic</div>
+            <h3>Build a CV that gets noticed</h3>
+            <p>7 min read · Guide</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <div class="skill-label">Interview prep</div>
+            <h3>Turn nerves into confidence</h3>
+            <p>10 min read · Guide</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <div class="skill-label">First job guide</div>
+            <h3>Know what to expect at work</h3>
+            <p>6 min read · Guide</p>
+          </article>
+        </div>
+
+        <div class="centered-action">
+          <a href="resources.html" class="btn btn-primary btn-md">Build Your Career</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-banner">
+      <div class="container trust-layout">
+        <div class="trust-photo"></div>
+        <div class="trust-copy">
+          <span class="section-badge trust-badge">Stay safe online</span>
+          <h2>A real opportunity will never ask you to pay to apply.</h2>
+          <p>We review listings before they go live, protect your personal details and help you avoid scams before you send any information.</p>
+          <ul class="trust-points">
+            <li>✓ No application fees</li>
+            <li>✓ Check the email domain</li>
+            <li>✓ Report suspicious listings</li>
+          </ul>
+          <a href="resources.html" class="trust-link">Read our scam awareness guide →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div class="container cta-banner-inner">
+        <div class="cta-banner-copy">
+          <span class="section-badge cta-badge">Your next move matters</span>
+          <h2>Ready to turn possibility into progress?</h2>
+          <p>Create your free profile, save opportunities and build a path that fits what you want to do next.</p>
+        </div>
+        <div class="cta-banner-actions">
+          <a href="opportunities.html" class="btn btn-light btn-md">Explore Opportunities</a>
+          <a href="resources.html" class="btn btn-outline-light btn-md">Build Your Career</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>Skill<span>Bridge</span></h2>
+          <p class="footer-tagline">
+            <strong>Find opportunities. Build skills. Bridge your future.</strong><br>
+            Connecting youth to verified opportunities that move them forward.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Navigation</h3>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="opportunities.html" class="footer-link">Opportunities</a>
+            <a href="resources.html" class="footer-link">Career Resources</a>
+            <a href="contact.html" class="footer-link">Contact &amp; Report</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Categories</h3>
+          <div class="footer-links">
+            <a href="opportunities.html?category=Job" class="footer-link">Jobs</a>
+            <a href="opportunities.html?category=Internship" class="footer-link">Internships</a>
+            <a href="opportunities.html?category=Learnership" class="footer-link">Learnerships</a>
+            <a href="opportunities.html?category=Bursary" class="footer-link">Bursaries</a>
+            <a href="opportunities.html?category=Course" class="footer-link">Courses</a>
+            <a href="opportunities.html?category=Skills%20Programme" class="footer-link">Skills Programmes</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Safety</h3>
+          <div class="footer-safety-box">
+            <strong>⚠️ Important Safety Notice</strong>
+            Always verify opportunities through official sources before submitting personal information.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer-bar">
+        <div>
+          <strong class="footer-disclaimer-highlight">Demo Platform Disclaimer:</strong>
+          This website is an educational demonstration project. Opportunities displayed on SkillBridge may be fictional examples or publicly available demonstration information. Always verify opportunities through the relevant organisation's official website.
+        </div>
+        <div class="footer-copyright">
+          &copy; 2026 SkillBridge. Educational demonstration project.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>

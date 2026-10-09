@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#123B5D" />
+      <stop offset="55%" stop-color="#0F8B8D" />
+      <stop offset="100%" stop-color="#2DD4BF" />
+    </linearGradient>
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4C95D" />
+      <stop offset="100%" stop-color="#E7A93C" />
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="64" height="64" rx="16" fill="#EAF7F7"/>
+  <path d="M12 42C18 42 24 34 30 28C35 23 42 18 52 12" stroke="url(#brandGradient)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M12 44H52" stroke="#123B5D" stroke-width="4" stroke-linecap="round" opacity="0.22"/>
+  <circle cx="12" cy="42" r="4" fill="#123B5D"/>
+  <circle cx="30" cy="28" r="4" fill="#0F8B8D"/>
+  <circle cx="52" cy="12" r="5" fill="url(#goldGlow)" stroke="#FFFFFF" stroke-width="1.8"/>
+</svg>
