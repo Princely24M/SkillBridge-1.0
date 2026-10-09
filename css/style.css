@@ -143,7 +143,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  background-color: var(--background);
+  background: linear-gradient(135deg, rgba(10, 102, 104, 0.12) 0%, var(--background) 48%, rgba(18, 59, 93, 0.1) 100%) fixed;
   color: var(--text);
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
@@ -301,7 +301,7 @@ ul, ol {
 }
 
 .homepage-shell {
-  background: var(--background);
+  background: transparent;
 }
 
 .hero-showcase {
@@ -722,7 +722,7 @@ ul, ol {
 }
 
 .deadline-section {
-  background: var(--background);
+  background: transparent;
 }
 
 .deadlines-layout {
@@ -2303,6 +2303,190 @@ ul, ol {
 /* --------------------------------------------------------------------------
    13. Search & Filter Bar (Opportunities Page)
    -------------------------------------------------------------------------- */
+.skillbridge-decorated {
+  position: relative;
+  isolation: isolate;
+}
+
+.skillbridge-decorated::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: min(46rem, 100%);
+  background-image:
+    linear-gradient(rgba(15, 139, 141, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 59, 93, 0.04) 1px, transparent 1px);
+  background-size: 42px 42px;
+  opacity: 0.3;
+  mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+  animation: skillbridge-grid-breathe 24s ease-in-out infinite alternate;
+}
+
+.skillbridge-decorated > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.skillbridge-bg {
+  position: absolute;
+  inset: 0 auto auto 50%;
+  z-index: 0;
+  width: min(100%, 1280px);
+  max-width: none;
+  height: clamp(34rem, 48vw, 42rem);
+  opacity: 0.4;
+  overflow: hidden;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.skillbridge-network-lines,
+.skillbridge-path {
+  fill: none;
+  stroke: var(--primary);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.skillbridge-network-lines {
+  stroke-width: 1.2;
+  stroke-opacity: 0.13;
+}
+
+.skillbridge-path {
+  stroke: var(--secondary-dark);
+  stroke-width: 1.8;
+  stroke-opacity: 0.22;
+}
+
+.skillbridge-node circle {
+  fill: var(--secondary);
+  opacity: 0.46;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: skillbridge-node-breathe 12s ease-in-out infinite;
+}
+
+.skillbridge-node:nth-of-type(even) circle {
+  animation-delay: -6s;
+}
+
+.skillbridge-node text,
+.skillbridge-word-fragment {
+  fill: var(--primary);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0.12;
+}
+
+.skillbridge-word-fragment {
+  font-size: 14px;
+  opacity: 0.075;
+}
+
+.skillbridge-particle {
+  fill: var(--secondary-dark);
+  opacity: 0.44;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: skillbridge-particle-glide 34s ease-in-out infinite;
+}
+
+.skillbridge-particle--two {
+  animation-delay: -17s;
+  animation-duration: 40s;
+}
+
+.skillbridge-float {
+  fill: none;
+  stroke: var(--secondary-dark);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6;
+  opacity: 0.12;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: skillbridge-float 28s ease-in-out infinite alternate;
+}
+
+.skillbridge-location {
+  animation-delay: -12s;
+}
+
+.skillbridge-map-route {
+  stroke-dasharray: 2 4;
+}
+
+.skillbridge-map-node {
+  fill: var(--secondary);
+  stroke: none;
+}
+
+@keyframes skillbridge-grid-breathe {
+  from { opacity: 0.22; }
+  to { opacity: 0.32; }
+}
+
+@keyframes skillbridge-node-breathe {
+  0%, 100% { opacity: 0.34; transform: scale(0.92); }
+  50% { opacity: 0.6; transform: scale(1.08); }
+}
+
+@keyframes skillbridge-particle-glide {
+  0%, 100% { opacity: 0.3; transform: translate(0, 0); }
+  50% { opacity: 0.58; transform: translate(12px, -8px); }
+}
+
+@keyframes skillbridge-float {
+  from { transform: translate(0, 0) rotate(-1deg); }
+  to { transform: translate(3px, -6px) rotate(1deg); }
+}
+
+@media (max-width: 900px) {
+  .skillbridge-node--optional,
+  .skillbridge-float--optional,
+  .skillbridge-word-fragment {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .skillbridge-bg {
+    height: 29rem;
+    opacity: 0.3;
+  }
+
+  .skillbridge-decorated::before {
+    height: 31rem;
+    background-size: 34px 34px;
+  }
+
+  .skillbridge-particle--two {
+    display: none;
+  }
+
+  .skillbridge-path {
+    stroke-opacity: 0.16;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skillbridge-decorated::before,
+  .skillbridge-node circle,
+  .skillbridge-particle,
+  .skillbridge-float {
+    animation: none;
+  }
+
+  .skillbridge-particle {
+    display: none;
+  }
+}
+
 .filter-panel {
   background-color: var(--surface);
   border: 1px solid var(--border);
