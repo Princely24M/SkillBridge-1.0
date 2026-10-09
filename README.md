@@ -9,6 +9,7 @@ Built strictly using **HTML5, CSS3, Vanilla JavaScript (ES6+), and JSON**, this 
 
 # Live Demo
 https://princely24m.github.io/SkillBridge-1.0/
+
 ---
 
 ## Table of Contents
